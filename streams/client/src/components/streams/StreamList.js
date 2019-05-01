@@ -13,8 +13,8 @@ class StreamList extends React.Component {
     renderAdmin(stream) {
         if (stream.userId === this.props.currentUserId) {
             return <div className="right floated content">
-                <Link to={`/streams/edit/${stream.id}`}className="ui button primary">Edit</Link>
-                <Link className="ui button primary">Delete</Link>
+                <Link to={`/streams/edit/${stream.id}`} className="ui button primary">Edit</Link>
+                <Link to={`/streams/delete/${stream.id}`} className="ui button primary">Delete</Link>
             </div>
         }
 
@@ -56,7 +56,7 @@ class StreamList extends React.Component {
             <h2>Streams
             </h2>
             <div className="ui celled list">{this.renderlist()}
-          
+
             </div>  {this.renderCreate()}
         </div>);
     }
